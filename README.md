@@ -13,5 +13,13 @@ A GenAI-powered assistant that can:
 
 ### 1. Clone the repository:
 ```bash
-git clone https://github.com/<your-username>/smart-assistant-app.git
+git clone https://github.com/pankaj7017523537/smart-assistant-app.git
 cd smart-assistant-app
+Create a Virtual Environment
+python -m venv venv
+venv\Scripts\activate  # On Windows
+# OR
+source venv/bin/activate  # On Mac/Linux
+
+Run the Streamlit App
+streamlit run app.py
