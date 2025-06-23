@@ -77,12 +77,15 @@ source venv/bin/activate  # macOS/Linux
 ```bash
 git clone https://github.com/pankaj7017523537/smart-assistant-app.git
 cd smart-assistant-app
+Project link--> https://github.com/pankaj7017523537/Asthma-prediction-app
+Project link--> https://github.com/pankaj7017523537/ATM-Simulation
 ```
 Create a Virtual Environment
+
 python -m venv venv
 venv\Scripts\activate  # On Windows
 # OR
 source venv/bin/activate  # On Mac/Linux
 
-Run the Streamlit App
+##Run the Streamlit App
 streamlit run app.py
