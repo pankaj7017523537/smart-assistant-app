@@ -10,6 +10,7 @@ A GenAI-powered assistant that can:
 ---
 
 ###🏗️ Architecture / Reasoning Flow
+
 [User Uploads PDF/TXT] 
         ↓
  [Text Extraction (PyMuPDF/Plaintext)]
@@ -21,7 +22,7 @@ A GenAI-powered assistant that can:
  [User Q → Similarity Search]
         ↓
  [FLAN-T5 Model → Final Answer + Justification]
-
+```
 ###🗂️ Project Structure
 smart-assistant-app/
 │
@@ -35,7 +36,7 @@ smart-assistant-app/
     ├── qa_chain.py            # QA vector search pipeline
     ├── summarizer.py          # Gemini summary generation
     └── challenge_mode.py      # MCQ challenge logic
-
+```
 ###🧠 Technologies Used
 
 Streamlit
@@ -49,24 +50,25 @@ LangChain + FAISS
 PyMuPDF
 
 FPDF (for report generation)
-
+```
 ### Create & Activate Virtual Environment
 python -m venv venv
 venv\Scripts\activate     # Windows
 # or
 source venv/bin/activate  # macOS/Linux
 
-
+```
 ###📌 Other Projects
-🔹 Asthma Disease Prediction & Suggestion System (Streamlit App)
-Predicts asthma likelihood based on lifestyle and environment features.
 
-Suggests improvements and supports bilingual UI (English/Hindi), PDF reports, and dark mode.
+🔹 Asthma Disease Prediction & Suggestion System (Streamlit App)
+    Predicts asthma likelihood based on lifestyle and environment features.
+
+   Suggests improvements and supports bilingual UI (English/Hindi), PDF reports, and dark mode.
 
 🔹 ATM Simulation System in Java
-Console-based project simulating ATM functionalities.
+   Console-based project simulating ATM functionalities.
 
-Implements OOP concepts like encapsulation, abstraction, and inheritance.
+   Implements OOP concepts like encapsulation, abstraction, and inheritance.
 
 
 ## 🚀 Setup Instructions
