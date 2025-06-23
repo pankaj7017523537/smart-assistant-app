@@ -51,24 +51,23 @@ PyMuPDF
 
 FPDF (for report generation)
 ```
-### Create & Activate Virtual Environment
+Create & Activate Virtual Environment
 python -m venv venv
-venv\Scripts\activate     # Windows
-# or
-source venv/bin/activate  # macOS/Linux
+venv\Scripts\activate         # Windows or
+source venv/bin/activate      # macOS/Linux
 
 ```
 📌 Other Projects
 
-🔹 Asthma Disease Prediction & Suggestion System (Streamlit App)
+🔹Asthma Disease Prediction & Suggestion System (Streamlit App)
    Predicts asthma likelihood based on lifestyle and environment features.
 
    Suggests improvements and supports bilingual UI (English/Hindi), PDF reports, and dark mode.
 
-🔹 ATM Simulation System in Java
-    Console-based project simulating ATM functionalities.
+🔹ATM Simulation System in Java
+  Console-based project simulating ATM functionalities.
 
-   Implements OOP concepts like encapsulation, abstraction, and inheritance.
+  Implements OOP concepts like encapsulation, abstraction, and inheritance.
 
 
  🚀 Setup Instructions
