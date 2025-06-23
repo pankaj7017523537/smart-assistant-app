@@ -11,7 +11,7 @@ A GenAI-powered assistant that can:
 
 🏗️ Architecture / Reasoning Flow
 
-[User Uploads PDF/TXT] 
+ [User Uploads PDF/TXT] 
         ↓
  [Text Extraction (PyMuPDF/Plaintext)]
         ↓
@@ -58,7 +58,7 @@ venv\Scripts\activate     # Windows
 source venv/bin/activate  # macOS/Linux
 
 ```
-###📌 Other Projects
+📌 Other Projects
 
 🔹 Asthma Disease Prediction & Suggestion System (Streamlit App)
    Predicts asthma likelihood based on lifestyle and environment features.
@@ -71,7 +71,7 @@ source venv/bin/activate  # macOS/Linux
    Implements OOP concepts like encapsulation, abstraction, and inheritance.
 
 
-## 🚀 Setup Instructions
+ 🚀 Setup Instructions
 
  1. Clone the repository:
 ```bash
@@ -85,7 +85,7 @@ Create a Virtual Environment
 python -m venv venv
 
 venv\Scripts\activate       # On Windows
-# OR
+ OR
 source venv/bin/activate    # On Mac/Linux
 
 Run the Streamlit App
