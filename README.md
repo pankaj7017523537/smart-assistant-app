@@ -1,3 +1,4 @@
+```
 ### 📚 Smart Assistant for Research Summarization
 🎯 Project Objective
 A GenAI-powered assistant that can:
@@ -7,7 +8,6 @@ A GenAI-powered assistant that can:
 - Highlight source-based justifications
 - Generate downloadable PDF reports
 
----
 
 ###🏗️ Architecture / Reasoning Flow
 
@@ -22,7 +22,7 @@ A GenAI-powered assistant that can:
  [User Q → Similarity Search]
         ↓
  [FLAN-T5 Model → Final Answer + Justification]
-```
+
 ###🗂️ Project Structure
 smart-assistant-app/
 │
@@ -61,14 +61,14 @@ source venv/bin/activate  # macOS/Linux
 ###📌 Other Projects
 
 🔹 Asthma Disease Prediction & Suggestion System (Streamlit App)
-    Predicts asthma likelihood based on lifestyle and environment features.
+     Predicts asthma likelihood based on lifestyle and environment features.
 
-   Suggests improvements and supports bilingual UI (English/Hindi), PDF reports, and dark mode.
+     Suggests improvements and supports bilingual UI (English/Hindi), PDF reports, and dark mode.
 
 🔹 ATM Simulation System in Java
-   Console-based project simulating ATM functionalities.
+    Console-based project simulating ATM functionalities.
 
-   Implements OOP concepts like encapsulation, abstraction, and inheritance.
+    Implements OOP concepts like encapsulation, abstraction, and inheritance.
 
 
 ## 🚀 Setup Instructions
@@ -83,9 +83,11 @@ Project link--> https://github.com/pankaj7017523537/ATM-Simulation
 Create a Virtual Environment
 
 python -m venv venv
-venv\Scripts\activate  # On Windows
+
+venv\Scripts\activate       # On Windows
 # OR
-source venv/bin/activate  # On Mac/Linux
+source venv/bin/activate    # On Mac/Linux
 
 ##Run the Streamlit App
+
 streamlit run app.py
