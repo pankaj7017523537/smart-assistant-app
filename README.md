@@ -1,5 +1,5 @@
 ```
- 📚 Smart Assistant for Research Summarization
+📚 Smart Assistant for Research Summarization
 🎯 Project Objective
 A GenAI-powered assistant that can:
 - Generate concise summaries (≤150 words)
