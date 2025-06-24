@@ -1,11 +1,19 @@
 from transformers import pipeline
 from sentence_transformers import CrossEncoder
+import google.generativeai as genai
 
-# Question generator pipeline (you can upgrade later if needed)
+# ✅ Text generator for questions (simple GPT-2 model)
 text_gen = pipeline("text-generation", model="gpt2")
 
-# Load semantic evaluator model once
+# ✅ Load semantic evaluator model once
 evaluator = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
+
+# ✅ Gemini model setup (used for answer evaluation only)
+try:
+    gemini_model = genai.GenerativeModel("gemini-2.0-flash")
+except Exception:
+    gemini_model = None  # Fallback if not available
+
 
 def generate_questions(text: str):
     """
@@ -27,20 +35,36 @@ def generate_questions(text: str):
     except Exception as e:
         return [f"❌ Error generating questions: {e}"]
 
+
 def evaluate_answer(question: str, answer: str, text: str, _=None):
     """
-    Evaluates user's answer by comparing it semantically to the context using a CrossEncoder.
+    Evaluates user answer using Gemini (if available), otherwise fallback to CrossEncoder.
     """
-    # Use a snippet of the document as ground truth context
-    context = text[:1000]
 
-    # Combine question and context
-    reference = f"Question: {question}\nRelevant Document Part: {context}"
+    # 🛡️ Guard against empty answers
+    if not answer.strip():
+        return "❌ No answer provided."
 
+    # ✨ Gemini-based Evaluation
+    if gemini_model:
+        try:
+            prompt = (
+                f"You're an academic evaluator.\n"
+                f"Document:\n{text[:1000]}\n\n"
+                f"Question: {question}\n"
+                f"Student Answer: {answer}\n\n"
+                f"Evaluate the quality of the student's answer and return concise feedback with a score (0–1)."
+            )
+            response = gemini_model.generate_content(prompt)
+            return response.text.strip()
+        except Exception as e:
+            return f"⚠️ Gemini evaluation failed: {e}"
+
+    # 🔁 Fallback to CrossEncoder (Semantic similarity)
     try:
+        reference = f"Question: {question}\nRelevant Document Part: {text[:1000]}"
         score = evaluator.predict([(reference, answer)])[0]
 
-        # Map score to feedback
         if score > 0.75:
             return f"✅ Good answer. You captured it well! (Score: {score:.2f})"
         elif score > 0.5:
